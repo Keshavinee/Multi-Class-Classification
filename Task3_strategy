@@ -1,0 +1,22 @@
+This is a neural network model built using Keras API in TensorFlow. Here is the layer by layer explanation of the model:
+
+Conv2D layer with 32 filters, each filter of size (3, 3), with 'relu' activation function, a
+nd input_shape as the shape of one input sample in the training data (excluding the batch size).
+
+MaxPooling2D layer with a pool size of (2, 2).
+
+Conv2D layer with 64 filters, each filter of size (3, 3), with 'relu' activation function.
+
+MaxPooling2D layer with a pool size of (2, 2).
+
+Conv2D layer with 128 filters, each filter of size (3, 3), with 'relu' activation function.
+
+MaxPooling2D layer with a pool size of (2, 2).
+
+Flatten layer to flatten the output of the previous layer into a 1D array.
+
+Dense layer with 64 neurons and 'relu' activation function.
+
+Dense layer with a single neuron (since it's a binary classification problem) and no activation function specified (this is the output layer).
+
+The model is compiled using the Adam optimizer with a learning rate of 0.001, and the loss function used is mean squared error (MSE).
