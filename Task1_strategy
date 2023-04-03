@@ -1,0 +1,19 @@
+This model is a convolutional neural network (CNN) designed for image classification tasks.
+It has multiple layers of convolutional and pooling operations, followed by fully connected layers. 
+The use of convolutional layers allows the network to capture spatial features of the input images 
+and detect patterns at different levels of abstraction.
+
+The first convolutional layer takes as input the one color channel and applies 16 filters, each of size 3x3,
+to produce 16 feature maps. The ReLU activation function is used to introduce non-linearity. The next layer is a 
+max pooling layer that reduces the size of the feature maps by a factor of 2, thus reducing the number of 
+parameters in the model and helping to prevent overfitting.
+
+The process is repeated with another convolutional layer that applies 32 filters, and a second max pooling layer.Finally, 
+a third convolutional layer applies 64 filters, followed by a third max pooling layer. The resulting feature maps are then 
+flattened into a vector and fed into a fully connected layer of size 128, again with a ReLU activation function.
+
+The output layer consists of 3 neurons, one for each class (no substructure, subhalo substructure, and vortex substructure), 
+and uses the softmax activation function to produce a probability distribution over the classes. It is capable of capturing 
+the relevant features in the input images and producing accurate predictions. However, the performance of the model can be 
+further improved by fine-tuning the hyperparameters, increasing the depth of the network, or incorporating other techniques
+such as regularization and data augmentation.
